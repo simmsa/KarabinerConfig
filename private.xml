@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<root>
+    <item>
+        <name>Shifts to brackets</name>
+        <appendix>Shifts when pressed alone are left and right square brackets respectively</appendix>
+        <identifier>private.shifts_to_brackets</identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::SHIFT_R, ModifierFlag::CONTROL_L,
+            KeyCode::BRACKET_RIGHT, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+            __KeyToKey__
+            KeyCode::SHIFT_L, ModifierFlag::CONTROL_L,
+            KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::BRACKET_LEFT, ModifierFlag::NONE</autogen>
+        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::NONE</autogen>
+        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::SHIFT_R, KeyCode::SHIFT_L, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::SHIFT_L, KeyCode::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_R</autogen>
+    </item>
+    <appdef>
+        <appname>GOOGLE_CHROME</appname>
+        <equal>com.google.chrome</equal>
+    </appdef>
+    <item>
+        <name>Google Chrome Emacs Keys</name>
+        <appendix>Remap emacs keys inside Chrome</appendix>
+        <identifier>private.chrome_emacs_keys</identifier>
+        <only>GOOGLE_CHROME</only>
+        <!-- Dvorak w -->
+        <!-- Delete word -->
+        <!-- Ctrl-w -> Alt-Backspace -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::COMMA, ModifierFlag::CONTROL_L,
+            KeyCode::DELETE, ModifierFlag::OPTION_L
+        </autogen>
+        <!-- Dvorak p -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::R, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_UP
+        </autogen>
+        <!-- Dvorak n -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::L, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_DOWN
+        </autogen>
+        <!-- Dvorak b -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::N, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_LEFT
+        </autogen>
+        <!-- Dvorak f -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::Y, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_RIGHT
+        </autogen>
+        <!-- Dvorak k -->
+        <!-- Delete Line -->
+        <!-- Ctrl-k -> Cmd-Backspace -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::V, ModifierFlag::CONTROL_L,
+            KeyCode::DELETE, ModifierFlag::COMMAND_L
+        </autogen>
+        <!-- Dvorak u -->
+        <!-- Undo -->
+        <!-- Ctrl-U -> Undo <Cmd-Z> -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::F, ModifierFlag::CONTROL_L,
+            KeyCode::Z, ModifierFlag::COMMAND_L
+        </autogen>
+        <!-- Ctrl-s switches windows -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::SEMICOLON, ModifierFlag::CONTROL_L,
+            KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
+        </autogen>
+        <!-- Ctrl-t switches windows -->
+        <autogen>
+            __KeyToKey__
+            KeyCode::K, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+</root>
