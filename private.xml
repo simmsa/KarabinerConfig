@@ -164,5 +164,20 @@
                 KeyCode::ESCAPE
             </autogen>
         </item>
+        <item>
+            <name>Hard To Reach Key Chords</name>
+            <appendix>"ao" and "ns" map to "`" and "\" respectively.</appendix>
+            <identifier>private.hard_to_reach_chords</identifier>
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::A, KeyCode::S,
+                KeyCode::BACKQUOTE
+            </autogen>
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::L, KeyCode::SEMICOLON,
+                KeyCode::BACKSLASH
+            </autogen>
+        </item>
     </item>
 </root>
