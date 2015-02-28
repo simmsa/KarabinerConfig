@@ -89,4 +89,80 @@
             KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L
         </autogen>
     </item>
+    <item>
+        <name>Key Chords</name>
+        <appendix>Map commonly used but hard to reach keys to combinations of home row keys</appendix>
+        <item>
+            <name>Shift Maps</name>
+            <appendix>"eu" and "ht" map to shift</appendix>
+            <identifier>private.chord_shift_maps</identifier>
+            <!-- eu == shift -->
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::D, KeyCode::F,
+                KeyCode::SHIFT_L
+            </autogen>
+            <!-- ht == shift -->
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::J, KeyCode::K,
+                KeyCode::SHIFT_L
+            </autogen>
+        </item>
+        <item>
+            <name>Control Maps</name>
+            <appendix>"oe" and "tn" map to "control"</appendix>
+            <identifier>private.chord_control_maps</identifier>
+            <!-- oe to control -->
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::S, KeyCode:: D,
+                KeyCode::CONTROL_L
+            </autogen>
+            <!-- tn to control -->
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::K, KeyCode:: L,
+                KeyCode::CONTROL_L
+            </autogen>
+        </item>
+        <item>
+            <name>Window Snapping</name>
+            <appendix>",.", ".p", and ",p", snaps windows left, right, and center</appendix>
+            <identifier>private.chord_window_snapping</identifier>
+            <!-- ,. == Snap window left -->
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::W, KeyCode::E,
+                KeyCode::QUOTE, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L
+            </autogen>
+            <!-- .p == Snap window right -->
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::E, KeyCode::R,
+                KeyCode::DOT, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L
+            </autogen>
+            <!-- ,p == Snap window center -->
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::W, KeyCode::R,
+                KeyCode::COMMA, ModifierFlag::SHIFT_L, ModifierFlag::COMMAND_L
+            </autogen>
+        </item>
+        <item>
+            <name>Escape Chords</name>
+            <appendix>"ou" and "hn" mapped to escape</appendix>
+            <identifier>private.chord_escape</identifier>
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::S, KeyCode::F,
+                KeyCode::ESCAPE
+            </autogen>
+            <autogen>
+                __SimultaneousKeyPresses__
+                KeyCode::J, KeyCode::L,
+                KeyCode::ESCAPE
+            </autogen>
+        </item>
+    </item>
 </root>
