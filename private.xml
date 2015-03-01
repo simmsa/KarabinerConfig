@@ -100,30 +100,34 @@
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::D, KeyCode::F,
-                KeyCode::SHIFT_L
+                KeyCode::SHIFT_L,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
             <!-- ht == shift -->
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::J, KeyCode::K,
-                KeyCode::SHIFT_L
+                KeyCode::SHIFT_L,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
         </item>
         <item>
             <name>Control Maps</name>
-            <appendix>"oe" and "tn" map to "control"</appendix>
+            <appendix>"oe" and "tn" map to "control" (When pressed individually, maps to escape)</appendix>
             <identifier>private.chord_control_maps</identifier>
             <!-- oe to control -->
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::S, KeyCode:: D,
-                KeyCode::CONTROL_L
+                KeyCode::CONTROL_L,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
             <!-- tn to control -->
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::K, KeyCode:: L,
-                KeyCode::CONTROL_L
+                KeyCode::CONTROL_L,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
         </item>
         <item>
@@ -150,18 +154,18 @@
             </autogen>
         </item>
         <item>
-            <name>Escape Chords</name>
-            <appendix>"ou" and "hn" mapped to escape</appendix>
+            <name>Application Switching Chords</name>
+            <appendix>"ou" and "hn" mapped to tab and command respectively</appendix>
             <identifier>private.chord_escape</identifier>
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::S, KeyCode::F,
-                KeyCode::ESCAPE
+                KeyCode::TAB
             </autogen>
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::J, KeyCode::L,
-                KeyCode::ESCAPE
+                KeyCode::COMMAND_R
             </autogen>
         </item>
         <item>
