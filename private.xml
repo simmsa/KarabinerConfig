@@ -2,22 +2,32 @@
 <root>
     <item>
         <name>Shifts to brackets</name>
-        <appendix>Shifts when pressed alone are left and right square brackets respectively</appendix>
+        <appendix>Shifts when pressed alone are left and right parens respectively. When pressed together they are left and right curly braces.</appendix>
         <identifier>private.shifts_to_brackets</identifier>
+        <!-- shift_l -> ( -->
         <autogen>
-            __KeyToKey__
-            KeyCode::SHIFT_R, ModifierFlag::CONTROL_L,
-            KeyCode::BRACKET_RIGHT, ModifierFlag::CONTROL_L
+            --KeyOverlaidModifier--
+            KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE,
+            KeyCode::SHIFT_L, KeyCode::KEY_9, ModifierFlag::SHIFT_L
         </autogen>
+        <!-- shift_r -> ) -->
         <autogen>
-            __KeyToKey__
-            KeyCode::SHIFT_L, ModifierFlag::CONTROL_L,
-            KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L
+            --KeyOverlaidModifier--
+            KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE,
+            KeyCode::SHIFT_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L
         </autogen>
-        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::BRACKET_LEFT, ModifierFlag::NONE</autogen>
-        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::NONE</autogen>
-        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::SHIFT_R, KeyCode::SHIFT_L, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
-        <autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::SHIFT_L, KeyCode::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_R</autogen>
+        <!-- shift_l + shift_r -> { -->
+        <autogen>
+            --KeyOverlaidModifier--
+            KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::SHIFT_R,
+            KeyCode::SHIFT_L, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L
+        </autogen>
+        <!-- shift_r + shift_l -> } -->
+        <autogen>
+            --KeyOverlaidModifier--
+            KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::SHIFT_L,
+            KeyCode::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_R
+        </autogen>
     </item>
     <appdef>
         <appname>GOOGLE_CHROME</appname>
@@ -107,7 +117,7 @@
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::J, KeyCode::K,
-                KeyCode::SHIFT_L,
+                KeyCode::SHIFT_R,
                 Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
         </item>
