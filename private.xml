@@ -29,6 +29,16 @@
             KeyCode::SHIFT_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_R
         </autogen>
     </item>
+    <item>
+        <name>Control_R to Control_R</name>
+        <appendix>(+ When you type Control_R only, send Enter)</appendix>
+        <identifier>private.control_r_to_enter</identifier>
+        <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::CONTROL_R,
+            KeyCode::CONTROL_R, KeyCode::RETURN
+        </autogen>
+    </item>
     <appdef>
         <appname>GOOGLE_CHROME</appname>
         <equal>com.google.chrome</equal>
@@ -136,7 +146,7 @@
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::K, KeyCode:: L,
-                KeyCode::CONTROL_L,
+                KeyCode::CONTROL_R,
                 Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
         </item>
