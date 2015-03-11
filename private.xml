@@ -96,12 +96,6 @@
             KeyCode::F, ModifierFlag::CONTROL_L,
             KeyCode::Z, ModifierFlag::COMMAND_L
         </autogen>
-        <!-- Ctrl-s switches windows -->
-        <autogen>
-            __KeyToKey__
-            KeyCode::SEMICOLON, ModifierFlag::CONTROL_L,
-            KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
-        </autogen>
         <!-- Ctrl-t switches windows -->
         <autogen>
             __KeyToKey__
