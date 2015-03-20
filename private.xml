@@ -107,6 +107,33 @@
         <name>Key Chords</name>
         <appendix>Map commonly used but hard to reach keys to combinations of home row keys</appendix>
         <item>
+            <name>Three Finger Chords</name>
+            <appendix>"oeu" and "htn" map to escape for mashing</appendix>
+            <identifier>private.three_finger_chords</identifier>
+            <autogen>
+                __SimultaneousKeyPresses__
+                @begin
+                KeyCode::S, KeyCode::D, KeyCode::F,
+                @end
+
+                @begin
+                KeyCode::ESCAPE,
+                Option::SIMULTANEOUSKEYPRESSES_RAW,
+                @end
+            </autogen>
+            <autogen>
+                __SimultaneousKeyPresses__
+                @begin
+                KeyCode::J, KeyCode::K, KeyCode::L,
+                @end
+
+                @begin
+                KeyCode::ESCAPE,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
+                @end
+            </autogen>
+        </item>
+        <item>
             <name>Shift Maps</name>
             <appendix>"eu" and "ht" map to shift</appendix>
             <identifier>private.chord_shift_maps</identifier>
@@ -174,12 +201,14 @@
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::S, KeyCode::F,
-                KeyCode::TAB
+                KeyCode::TAB,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::J, KeyCode::L,
-                KeyCode::COMMAND_R
+                KeyCode::COMMAND_R,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
         </item>
         <item>
@@ -189,12 +218,14 @@
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::A, KeyCode::S,
-                KeyCode::BACKQUOTE
+                KeyCode::BACKQUOTE,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
             <autogen>
                 __SimultaneousKeyPresses__
                 KeyCode::L, KeyCode::SEMICOLON,
-                KeyCode::BACKSLASH
+                KeyCode::BACKSLASH,
+                Option::SIMULTANEOUSKEYPRESSES_RAW
             </autogen>
         </item>
     </item>
