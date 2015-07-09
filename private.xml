@@ -229,4 +229,15 @@
             </autogen>
         </item>
     </item>
+    <item>
+        <name>Scroll The Previous Application Down From Anywhere</name>
+        <appendix>"cr" scrolls the previous application down then returns to the previous application</appendix>
+        <identifier>private.chrome_scroll_down</identifier>
+        <!-- uses Better Touch Tool to do the heavy lifting -->
+        <autogen>
+            __SimultaneousKeyPresses__
+            KeyCode::I, KeyCode::O,
+            KeyCode::KEY_5, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L,
+        </autogen>
+    </item>
 </root>
