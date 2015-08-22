@@ -240,4 +240,22 @@
             KeyCode::KEY_5, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L,
         </autogen>
     </item>
+    <appdef>
+        <appname>ABLETON_LIVE</appname>
+        <equal>com.ableton.live</equal>
+    </appdef>
+    <item>
+        <name>Ableton Live Mouse Scroll to Key Up / Down</name>
+        <appendix>Better scrolling in ableton</appendix>
+        <identifier>private.ableton_scroll_mod</identifier>
+        <only>ABLETON_LIVE</only>
+        <autogen>
+            __ScrollWheelToKey__
+            ScrollWheel::UP, KeyCode::CURSOR_UP
+        </autogen>
+        <autogen>
+            __ScrollWheelToKey__
+            ScrollWheel::DOWN, KeyCode::CURSOR_DOWN
+        </autogen>
+    </item>
 </root>
