@@ -246,9 +246,35 @@
     </appdef>
     <item>
         <name>Ableton Live Mouse Scroll to Key Up / Down</name>
-        <appendix>Better scrolling in ableton</appendix>
+        <appendix>By default the mouse scroll wheel is mapped to the cursor up and cursor down actions. "Command" + scroll wheel is a normal scroll wheel, and "Shift" + scroll wheel is left / right scrolling. "Shift" + "Command" + Scroll is mapped to cursor left / right.</appendix>
         <identifier>private.ableton_scroll_mod</identifier>
         <only>ABLETON_LIVE</only>
+        <!-- In general put the autogens with the most modifiers first, trickling down to the commands with the least number of modifiers. -->
+        <autogen>
+            __ScrollWheelToKey__
+            ScrollWheel::UP, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::CURSOR_LEFT
+        </autogen>
+        <autogen>
+            __ScrollWheelToKey__
+            ScrollWheel::DOWN, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L, KeyCode::CURSOR_RIGHT
+        </autogen>
+        <autogen>
+            __ScrollWheelToScrollWheel__
+            ScrollWheel::UP, ModifierFlag::COMMAND_L, ScrollWheel::UP
+        </autogen>
+        <autogen>
+            __ScrollWheelToScrollWheel__
+            ScrollWheel::DOWN, ModifierFlag::COMMAND_L, ScrollWheel::DOWN
+        </autogen>
+        <autogen>
+            __ScrollWheelToScrollWheel__
+            ScrollWheel::UP, ModifierFlag::SHIFT_L, ScrollWheel::UP, ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>
+            __ScrollWheelToScrollWheel__
+            ScrollWheel::DOWN, ModifierFlag::SHIFT_L, ScrollWheel::DOWN, ModifierFlag::SHIFT_L
+        </autogen>
+        <!-- Keep these last -->
         <autogen>
             __ScrollWheelToKey__
             ScrollWheel::UP, KeyCode::CURSOR_UP
